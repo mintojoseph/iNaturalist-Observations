@@ -118,7 +118,7 @@ for bfile in file_paths:
     try:
         img_exif = img._getexif()
     except:
-        print("Warning: No exif value in the image. Will user current date and speciied coordinates")
+        print("Warning: No exif value in the image. Will use current date and specified coordinates")
         date_time = datetime.datetime.now().isoformat()
         latitude_longitude = [args.latitude, args.longitude]
     
