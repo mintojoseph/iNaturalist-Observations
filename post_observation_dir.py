@@ -131,10 +131,10 @@ for bfile in file_paths:
         try:
             latitude_longitude = get_lat_long(img)
         except:
-            print ("Warning: No Lat Long values in the image. If any coordinates are specified, they will be used")
+            print ("Warning: No Latitude and Longitude coordinate values in the image. If any coordinates are specified in the parameters, they will be used")
             latitude_longitude = [args.latitude, args.longitude]
     else:
-        print("Warning: No exif value in the image. Will user current date and speciied coordinates")
+        print("Warning: No date and coodrinates in the image. Will use current date and speciied coordinates")
         date_time = datetime.datetime.now().isoformat()
         latitude_longitude = [args.latitude, args.longitude]
     
